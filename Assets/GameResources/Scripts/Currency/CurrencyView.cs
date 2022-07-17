@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
-//using DG.Tweening;
+using DG.Tweening;
 
 [RequireComponent(typeof(TMP_Text))]
 public class CurrencyView : MonoBehaviour
@@ -15,7 +15,7 @@ public class CurrencyView : MonoBehaviour
     [SerializeField]
     private float scaleOnChange = 1.2f;
 
-    //private Tween tween;
+    private Tween tween;
 
     private TMP_Text text;
 
@@ -42,20 +42,20 @@ public class CurrencyView : MonoBehaviour
         if (this.type != type) return;
 
         text.text = Currency.GetValue(type).ToString();
-        /*
+        
         if (tween != null && tween.IsPlaying()) return;
 
         tween = transform.DOScale(Vector3.one * scaleOnChange, durationOnChange / 2).SetEase(Ease.InOutBounce).OnComplete(() => 
         {
             tween = transform.DOScale(Vector3.one, durationOnChange / 2).SetEase(Ease.InOutBounce); 
-        });*/
+        });
     }
 
     private void OnNotEnoughMoney(CurrencyType type)
     {
         if (this.type != type) return;
 
-        /*text.color = Color.red;
+        text.color = Color.red;
 
         if (tween != null && tween.IsPlaying()) return;
 
@@ -64,6 +64,6 @@ public class CurrencyView : MonoBehaviour
             tween = transform.DOScale(Vector3.one, durationOnChange / 2).SetEase(Ease.InOutBounce).OnComplete(() => {
                 text.color = Color.white;
             });
-        });*/
+        });
     }
 }
