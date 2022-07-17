@@ -1,5 +1,17 @@
 {
   "dependencies": {
+    "com.k0fe.yandexgamessdk": {
+      "version": "file:D:/Proga/SDK/YandexSDKPackage",
+      "depth": 0,
+      "source": "local",
+      "dependencies": {}
+    },
+    "com.unity.2d.sprite": {
+      "version": "1.0.0",
+      "depth": 0,
+      "source": "builtin",
+      "dependencies": {}
+    },
     "com.unity.collab-proxy": {
       "version": "1.15.18",
       "depth": 0,
